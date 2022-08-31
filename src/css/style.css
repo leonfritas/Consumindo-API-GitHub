@@ -1,0 +1,151 @@
+*{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(58, 58, 58);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    margin-top: 5%;
+    background-color: rgba(5, 116, 180, 0.39);
+    border-radius: 20px;
+    padding: 25px;
+    width: 600px;
+    margin-bottom: 30px;
+}
+.container header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.container header img{
+    width: 50px;
+}
+
+#input-search{
+    border:none;
+    border-radius: 2px;
+    height: 20px;
+    margin-bottom: 5px;
+    outline-style: none; 
+}
+
+#btn-search:hover{
+    cursor: pointer;
+}
+
+.container h2{
+    text-align: center;
+    color: white; 
+}
+
+.profile-data{
+    text-align: center;
+    color: white;
+}
+
+.infouser{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.infouser img{
+    width: 280px;
+    border: 10px solid rgb(64, 206, 211);
+    border-radius: 50%;
+    background-color: #1ff2f3;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+.repotitle{
+    margin: 40px;
+}
+
+.repositories ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-top: 20px; 
+}
+
+.repositories a{
+    color:white;
+}
+
+.repositories ul{
+    margin-top: 30px;
+}
+
+.repositories li a{
+    background-color: rgb(45, 94, 139);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.repositories .details{
+    margin: 15px;
+}
+
+.repositories .details li{
+    background-color: rgb(16, 6, 56);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.repositories li a:hover{
+    background-color: rgb(41, 36, 107);
+}
+
+.followers{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.eventstitle{
+    margin: 30px;
+}
+
+@media(max-width:700px){
+    .container{
+        width:  80%;
+    }
+
+    .infouser{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .repositories li a{
+        font-size: 15px;
+    }
+
+    .infouser img{
+        width: 200px;
+    }
+}
