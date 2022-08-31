@@ -27,7 +27,6 @@ const user = {
         this.language = repositories.language
 
     },
-
     setEvents(events){
         this.events = events
     }

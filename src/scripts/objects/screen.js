@@ -14,7 +14,7 @@ const screen = {
                             </div>
                         </div>
                         `
-        
+
         let repositoriesItens = ''
         user.repositories.forEach(repo => repositoriesItens += `<li><a href ="${repo.html_url}" target="_blank">${repo.name}</a><br>
                                                                     <ul class="details"> 
@@ -37,9 +37,7 @@ const screen = {
              if(evnts.type === "PushEvent" || evnts.type === "CreateEvent"){
                 if(evnts.payload.commits){
                 eventsItens += `<li>Nome do Repositório:<p>${evnts.repo.name}</p>Commit:<p>${evnts.payload.commits[0].message} <br><br><br></p></li>`;
-                
                 }
-
              }
             })
 
@@ -53,10 +51,7 @@ const screen = {
     ,
     renderNotFound(){
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
-        
     }
 }
-
-
 
 export { screen }
