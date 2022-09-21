@@ -7,24 +7,34 @@
 }
 
 body {
-  background-color: rgb(58, 58, 58);
+  background-color: rgb(31, 31, 31);
+  
+  
 }
 
 main {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.github{
+  width: 50px;
+  text-align: center;
+  margin-top: 50px;
+  filter: invert();
+}
+
 .container {
-  margin-top: 5%;
-  background-color: rgba(5, 116, 180, 0.39);
+  margin-top: 30px;
+  background-color: rgb(255, 255, 255);
   border-radius: 20px;
   padding: 25px;
-  width: 600px;
+  width: 700px;
   margin-bottom: 30px;
 }
 .container header {
@@ -35,16 +45,27 @@ main {
   margin-bottom: 30px;
 }
 
-.container header img {
-  width: 50px;
-}
+
 
 #input-search {
-  border: none;
-  border-radius: 2px;
-  height: 20px;
-  margin-bottom: 5px;
-  outline-style: none;
+  border: 1px solid rgb(155, 155, 155);
+  border-radius: 5px;
+  height: 30px;
+  width: 300px;
+  padding: 5px;
+  margin: 5px;
+  outline: none;
+}
+
+
+
+#btn-search{
+  margin-top: 8px;
+  padding: 5px;
+  width: 150px;
+  border-radius: 5px;
+  border: 1px solid gray
+
 }
 
 #btn-search:hover {
@@ -53,23 +74,24 @@ main {
 
 .container h2 {
   text-align: center;
-  color: white;
+  color: #000;
 }
 
 .profile-data {
   text-align: center;
-  color: white;
+  color: #000;
 }
 
 .infouser {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: 10px;
 }
 
 .infouser img {
   width: 280px;
-  border: 10px solid rgb(64, 206, 211);
+  border: 10px solid rgb(255, 72, 231);
   border-radius: 50%;
   background-color: #1ff2f3;
 }
@@ -91,7 +113,7 @@ h2 {
 }
 
 .repositories a {
-  color: white;
+  color: #000;
 }
 
 .repositories ul {
@@ -99,8 +121,9 @@ h2 {
 }
 
 .repositories li a {
-  background-color: rgb(45, 94, 139);
+  background-color: rgb(255, 255, 255);
   padding: 10px;
+  border: 1px solid #000;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -110,7 +133,7 @@ h2 {
 }
 
 .repositories .details li {
-  background-color: rgb(16, 6, 56);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 5px;
   font-size: 12px;
@@ -118,7 +141,7 @@ h2 {
 }
 
 .repositories li a:hover {
-  background-color: rgb(41, 36, 107);
+  background-color: rgb(255, 168, 248);
 }
 
 .followers {

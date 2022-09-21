@@ -6,10 +6,6 @@ const user = {
     following:'',
     userName:'',
     repositories:'',
-    forks:'',
-    stars:'',
-    watchers:'',
-    language:'',
     events:'',
     setInfo(gitHubUser){
         this.avatarUrl = gitHubUser.avatar_url
@@ -21,10 +17,7 @@ const user = {
     },
     setRepositories(repositories){
         this.repositories = repositories
-        this.forks = repositories.forks
-        this.stars = repositories.stargazers_count
-        this.watchers = repositories.watchers
-        this.language = repositories.language
+        
 
     },
     setEvents(events){

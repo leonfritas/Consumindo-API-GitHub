@@ -16,15 +16,18 @@ const screen = {
                         `
 
         let repositoriesItens = ''
+        
         user.repositories.forEach(repo => repositoriesItens += `<li><a href ="${repo.html_url}" target="_blank">${repo.name}</a><br>
                                                                     <ul class="details"> 
                                                                        <li> ${repo.forks}🍴</li>
                                                                        <li> ${repo.stargazers_count}⭐</li>
                                                                        <li>${repo.watchers}👀</li>
-                                                                       <li> ${repo.language}🌅</li>
+                                                                       <li> ${repo.language ?? "Sem linguagem"}🌅</li>
                                                                     </ul>
                                                                 </li>`)
-
+                                                                
+                                                                
+        
         if(user.repositories.length > 0){
             this.userProfile.innerHTML += ` <h2 class="repotitle">Repositórios</h2>
                                             <div class="repositories section">
@@ -32,25 +35,28 @@ const screen = {
                                             </div>`
                                     }
 
+       
+       
+       
         let eventsItens = ''
-        user.events.forEach(evnts => {
-             if(evnts.type === "PushEvent" || evnts.type === "CreateEvent"){
-                if(evnts.payload.commits){
-                eventsItens += `<li>Nome do Repositório:<p>${evnts.repo.name}</p>Commit:<p>${evnts.payload.commits[0].message} <br><br><br></p></li>`;
+        user.events.forEach(event => {
+             if(event.type === "PushEvent" || event.type === "CreateEvent"){
+                if(event.payload.commits){
+                eventsItens += `<li>Nome do Repositório:<p>${event.repo.name}</p>Commit:<p>${event.payload.commits[0].message} <br><br><br></p></li>`;
                 }
              }
             })
+            if(user.events.length > 0){
+                this.userProfile.innerHTML += `<h2 class="eventstitle">Eventos</h2>
+                                                <div class="events">
+                                                    <ul>${eventsItens}</ul>
+                                                </div>`
+                                            }
 
-        if(user.events.length > 0){
-            this.userProfile.innerHTML += `<h2 class="eventstitle">Eventos</h2>
-                                            <div class="events">
-                                                <ul>${eventsItens}</ul>
-                                            </div>`
-        }
-    }
-    ,
+        
+    },
     renderNotFound(){
-        this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
+        this.userProfile.innerHTML = "<p>Usuário não encontrado</p>"
     }
 }
 
